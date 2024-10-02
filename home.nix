@@ -9,5 +9,5 @@
     homeDirectory = "/home/lasse";
 
     stateVersion = "23.11";
-  }
+  };
 }
