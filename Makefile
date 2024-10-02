@@ -1,6 +1,6 @@
 .PHONY: update
 update:
-	home-manager switch --flake .#lasse
+	git add -A && home-manager switch --flake .#lasse
 
 .PHONY: clean
 clean:
