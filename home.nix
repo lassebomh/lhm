@@ -3,6 +3,7 @@
   home = {
     packages = with pkgs; [
       hello
+      nnn
     ];
 
     username = "lasse";
