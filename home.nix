@@ -25,21 +25,24 @@
     stateVersion = "23.11";
   };
 
-  lasse.homeManagerScripts = {
-    enable = true;
-    configDir = "/home/lasse/lhm";
-    machine = "lasse";
+  lasse = {
+    homeManagerScripts = {
+      enable = true;
+      configDir = "/home/lasse/lhm";
+      machine = "lasse";
+    };
+
+    zsh.enable = true;
+    fonts.enable = true;
+    yazi.enable = true;
+
+    git = {
+      enable = true;
+      userName = "Lasse H. Bomholt";
+      userEmail = "lasse@bomh.net";
+    };
   };
 
-  lasse.zsh.enable = true;
-  lasse.fonts.enable = true;
-  lasse.yazi.enable = true;
-
-  lasse.git = {
-    enable = true;
-    userName = "Lasse H. Bomholt";
-    userEmail = "lasse@bomh.net";
-  };
 
   # Disable home manager news
   news.display = "silent";
@@ -48,6 +51,13 @@
   
   programs = {
     home-manager.enable = true;
+    
+    zsh.initExtra = lib.mkAfter "j";
+    
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     bash = {
       enable = true;
