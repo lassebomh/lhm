@@ -84,7 +84,8 @@ in {
 
     programs.yazi = {
       enable = cfg.enable;
-      enableZshIntegration = true;
+      enableBashIntegration = true;
+      enableZshIntegration = false;
       shellWrapperName = "j";
       initLua = ''
         require("full-border"):setup()
