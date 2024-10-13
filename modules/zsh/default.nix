@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.lasse.zsh;
+  cfg = config.modules.zsh;
 in {
-  options.lasse.zsh = {
+  options.modules.zsh = {
     enable = mkEnableOption "zsh configuration.";
   };
 

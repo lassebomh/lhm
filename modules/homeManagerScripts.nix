@@ -5,7 +5,7 @@
   ...
 }:
 with lib; let
-  cfg = config.lasse.homeManagerScripts;
+  cfg = config.modules.homeManagerScripts;
   configDir =
     if (cfg.configDir != null)
     then cfg.configDir
@@ -64,7 +64,7 @@ with lib; let
     '';
   };
 in {
-  options.lasse.homeManagerScripts = {
+  options.modules.homeManagerScripts = {
     enable = mkEnableOption ''
       Home manager scripts. Gives access to command-line scripts that make
       managing home-manager easier. These scripts are lean bash scripts that

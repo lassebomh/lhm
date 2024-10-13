@@ -14,7 +14,10 @@
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in {
       homeConfigurations = {
         lasse = home-manager.lib.homeManagerConfiguration {
@@ -26,8 +29,8 @@
         };
       };
       homeManagerModules = rec {
-        lasse = import ./modules/home-manager;
-        default = lasse;
+        modules = import ./modules;
+        default = modules;
       };
     };
 }

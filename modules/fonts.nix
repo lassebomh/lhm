@@ -5,10 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.lasse.fonts;
+  cfg = config.modules.fonts;
 in {
-  options.lasse.fonts = {
-    enable = mkEnableOption "Enable my fonts, namely fira-code with nerdfonts. Note that this is required for lasse modules that use the nerdfont icons to function properly.";
+  options.modules.fonts = {
+    enable = mkEnableOption "Enable my fonts, namely fira-code with nerdfonts. Note that this is required for modules that use the nerdfont icons to function properly.";
   };
 
   config = mkIf cfg.enable {

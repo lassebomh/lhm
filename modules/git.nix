@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.lasse.git;
+  cfg = config.modules.git;
 in {
-  options.lasse.git = {
+  options.modules.git = {
     enable = mkEnableOption "git";
 
     userEmail = mkOption {

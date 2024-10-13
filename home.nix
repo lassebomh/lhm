@@ -1,7 +1,5 @@
 { lib, pkgs, ... }:
-{
-  nixpkgs.config.allowUnfree = true;
-  
+{  
   home = {
     packages = with pkgs; [
       hello
@@ -25,7 +23,7 @@
     stateVersion = "23.11";
   };
 
-  lasse = {
+  modules = {
     homeManagerScripts = {
       enable = true;
       configDir = "/home/lasse/lhm";
