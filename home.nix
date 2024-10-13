@@ -2,14 +2,6 @@
 {  
   home = {
     packages = with pkgs; [
-      hello
-      nnn
-      dotnetCorePackages.sdk_8_0
-      nodejs_20
-      ffmpeg
-      nodePackages.pnpm
-
-      neovim
       trash-cli
 
       # Fonts
@@ -24,15 +16,16 @@
   };
 
   modules = {
+    zsh.enable = true;
+    fonts.enable = true;
+    yazi.enable = true;
+    vscode.enable = true;
+
     homeManagerScripts = {
       enable = true;
       configDir = "/home/lasse/lhm";
       machine = "lasse";
     };
-
-    zsh.enable = true;
-    fonts.enable = true;
-    yazi.enable = true;
 
     git = {
       enable = true;

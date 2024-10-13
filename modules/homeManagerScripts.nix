@@ -24,6 +24,11 @@ with lib; let
     '';
   };
 
+  hm-help = pkgs.writeShellApplication {
+    name = "hm-help";
+    text = "man home-configuration.nix";
+  };
+
   hm-update = pkgs.writeShellApplication {
     name = "hm-update";
     text = ''
@@ -108,6 +113,7 @@ in {
       hm-rebuild
       hm-clean
       hm-rollback
+      hm-help
     ];
   };
 }

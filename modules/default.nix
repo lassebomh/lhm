@@ -5,5 +5,6 @@
     ./fonts.nix
     ./yazi.nix
     ./git.nix
+    ./vscode
   ];
 }
