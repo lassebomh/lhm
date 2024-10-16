@@ -20,10 +20,18 @@
       };
     in {
       homeConfigurations = {
-        lasse = home-manager.lib.homeManagerConfiguration {
+        desktop = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
+            ./configurations/desktop.nix
+            self.homeManagerModules.default
+          ];
+        };
+        
+        work = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./configurations/work.nix
             self.homeManagerModules.default
           ];
         };

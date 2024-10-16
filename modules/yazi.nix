@@ -41,12 +41,12 @@ with lib; let
       rev = "c204853de7a78bc99ea628e51857ce65506468db";
       hash = "sha256-NBco10MINyAJk1YWHwYUzvI9mnTJl9aYyDtQSTUP3Hs=";
     };
-    mkdir = mkYaziPluginGithub {
-      name = "mkdir";
-      url = "https://github.com/Sonico98/mkdir.yazi";
-      rev = "0c0b87a576d49001603f63d447aab166ec35363f";
-      hash = "sha256-rx3B3MyljqabEjJDtCx807JhIemafduQ0i5fJvJXAzs=";
-    };
+    # mkdir = mkYaziPluginGithub {
+    #   name = "mkdir";
+    #   url = "https://github.com/Sonico98/mkdir.yazi";
+    #   rev = "0c0b87a576d49001603f63d447aab166ec35363f";
+    #   hash = "sha256-rx3B3MyljqabEjJDtCx807JhIemafduQ0i5fJvJXAzs=";
+    # };
     exifaudio = mkYaziPluginGithub {
       name = "exifaudio";
       url = "https://github.com/Sonico98/exifaudio.yazi";
@@ -109,11 +109,11 @@ in {
               run = ''shell --block --confirm "$EDITOR $0"'';
               desc = "Open the selected files in editor";
             }
-            {
-              on = [ "m" "d" ];
-              run = "plugin mkdir";
-              desc = "Create a directory";
-            }
+            # {
+            #   on = [ "m" "d" ];
+            #   run = "plugin mkdir";
+            #   desc = "Create a directory";
+            # }
             {
               on = [ "m" "f" ];
               run = "create";
@@ -251,7 +251,7 @@ in {
       };
       flavors.gruvbox-dark = plugins.gruvbox-dark;
       plugins = {
-        mkdir = plugins.mkdir;
+        # mkdir = plugins.mkdir;
         exifaudio = plugins.exifaudio;
         full-border = mkYaziPlugin "full-border";
         git = mkYaziPlugin "git";
