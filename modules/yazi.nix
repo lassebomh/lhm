@@ -41,6 +41,12 @@ with lib; let
       rev = "c204853de7a78bc99ea628e51857ce65506468db";
       hash = "sha256-NBco10MINyAJk1YWHwYUzvI9mnTJl9aYyDtQSTUP3Hs=";
     };
+    #starship = mkYaziPluginGithub {
+    #  name = "starship";
+    #  url = "https://github.com/Rolv-Apneseth/starship.yazi";
+    #  rev = "c204853de7a78bc99ea628e51857ce65506468db";
+    #  hash = "";
+    #};
     # mkdir = mkYaziPluginGithub {
     #   name = "mkdir";
     #   url = "https://github.com/Sonico98/mkdir.yazi";
@@ -85,7 +91,7 @@ in {
     programs.yazi = {
       enable = cfg.enable;
       enableBashIntegration = true;
-      enableZshIntegration = false;
+      enableZshIntegration = true;
       shellWrapperName = "j";
       initLua = ''
         require("full-border"):setup()

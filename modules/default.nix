@@ -6,5 +6,6 @@
     ./yazi.nix
     ./git.nix
     ./vscode
+    ./tmux
   ];
 }

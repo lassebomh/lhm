@@ -12,6 +12,11 @@ in {
   };
 
   config = mkIf cfg.enable {
+
+    programs.starship = {
+      enable = true;
+    };
+
     programs.zsh = {
       enable = true;
       autosuggestion.enable = true;
@@ -19,11 +24,11 @@ in {
       oh-my-zsh.enable = true;
 
       plugins = [
-        {
-          name = "gruvbox-powerline";
-          file = "gruvbox.zsh-theme";
-          src = ./gruvbox-powerline;
-        }
+        #{
+        #  name = "gruvbox-powerline";
+        #  file = "gruvbox.zsh-theme";
+        #  src = ./gruvbox-powerline;
+        #}
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";
