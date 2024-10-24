@@ -41,17 +41,11 @@ with lib; let
       rev = "c204853de7a78bc99ea628e51857ce65506468db";
       hash = "sha256-NBco10MINyAJk1YWHwYUzvI9mnTJl9aYyDtQSTUP3Hs=";
     };
-    #starship = mkYaziPluginGithub {
-    #  name = "starship";
-    #  url = "https://github.com/Rolv-Apneseth/starship.yazi";
-    #  rev = "c204853de7a78bc99ea628e51857ce65506468db";
-    #  hash = "";
-    #};
-    # mkdir = mkYaziPluginGithub {
-    #   name = "mkdir";
-    #   url = "https://github.com/Sonico98/mkdir.yazi";
-    #   rev = "0c0b87a576d49001603f63d447aab166ec35363f";
-    #   hash = "sha256-rx3B3MyljqabEjJDtCx807JhIemafduQ0i5fJvJXAzs=";
+    # starship = mkYaziPluginGithub {
+    #   name = "starship";
+    #   url = "https://github.com/Rolv-Apneseth/starship.yazi";
+    #   rev = "77a65f5a367f833ad5e6687261494044006de9c3";
+    #   hash = "sha256-sAB0958lLNqqwkpucRsUqLHFV/PJYoJL2lHFtfHDZF8=";
     # };
     exifaudio = mkYaziPluginGithub {
       name = "exifaudio";
@@ -93,6 +87,7 @@ in {
       enableBashIntegration = true;
       enableZshIntegration = true;
       shellWrapperName = "j";
+      # require("starship"):setup()
       initLua = ''
         require("full-border"):setup()
         require("git"):setup()
@@ -255,7 +250,7 @@ in {
           ];
         };
       };
-      flavors.gruvbox-dark = plugins.gruvbox-dark;
+      # flavors.starship = plugins.starship;
       plugins = {
         # mkdir = plugins.mkdir;
         exifaudio = plugins.exifaudio;
@@ -266,7 +261,7 @@ in {
         hide-preview = mkYaziPlugin "hide-preview";
         max-preview = mkYaziPlugin "max-preview";
       };
-      theme.flavor.use = "gruvbox-dark";
+      # theme.flavor.use = "starship";
     };
   };
 }

@@ -41,7 +41,9 @@
 
     direnv = {
       enable = true;
-      enableBashIntegration = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+      silent = true;
     };
         
     fzf = {
@@ -57,6 +59,7 @@
 
     neovim = {
       enable = true;
+      defaultEditor = true;
     };
 
     tmux = {
