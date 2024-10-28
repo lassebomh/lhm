@@ -23,7 +23,7 @@
         desktop = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./configurations/desktop.nix
+            ./configurations/desktop
             self.homeManagerModules.default
           ];
         };
@@ -31,7 +31,7 @@
         work = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./configurations/work.nix
+            ./configurations/work
             self.homeManagerModules.default
           ];
         };

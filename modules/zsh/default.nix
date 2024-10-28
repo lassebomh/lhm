@@ -17,6 +17,12 @@ in {
       enable = true;
     };
 
+    programs.bash = {
+      enable = true;
+      enableCompletion = true;
+      initExtra = "exec zsh";
+    };
+
     programs.zsh = {
       enable = true;
       autosuggestion.enable = true;
@@ -24,11 +30,6 @@ in {
       oh-my-zsh.enable = true;
 
       plugins = [
-        #{
-        #  name = "gruvbox-powerline";
-        #  file = "gruvbox.zsh-theme";
-        #  src = ./gruvbox-powerline;
-        #}
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";

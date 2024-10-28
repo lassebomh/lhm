@@ -20,7 +20,7 @@
     homeManagerScripts = {
       enable = true;
       configDir = "/home/lhb/lhm";
-      machine = "work";
+      configuration = "work";
     };
 
     git = {
@@ -38,25 +38,6 @@
   
   programs = {
     home-manager.enable = true;
-
-    direnv = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = false;
-      # silent = true;
-    };
-        
-    fzf = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    bash = {
-      enable = true;
-      enableCompletion = true;
-      initExtra = "exec zsh";
-    };
 
     neovim = {
       enable = true;

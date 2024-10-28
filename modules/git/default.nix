@@ -10,12 +10,12 @@ in {
   options.modules.git = {
     enable = mkEnableOption "git";
 
-    userEmail = mkOption {
+    email = mkOption {
       type = types.str;
       description = "What email address to use for git.";
     };
 
-    userName = mkOption {
+    fullname = mkOption {
       type = types.str;
       description = "Username to use for git.";
     };
@@ -30,8 +30,8 @@ in {
     programs.git = {
       enable = true;
       
-      userEmail = cfg.userEmail;
-      userName = cfg.userName;
+      userEmail = cfg.email;
+      userName = cfg.fullname;
 
       difftastic.enable = true;
       

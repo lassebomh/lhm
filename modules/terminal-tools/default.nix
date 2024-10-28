@@ -5,7 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.homeManagerScripts;
+
+  module = baseNameOf ./.;
+
+  cfg = config.modules.${module};
   configDir =
     if (cfg.configDir != null)
     then cfg.configDir
@@ -52,7 +55,7 @@ with lib; let
       # Switch configuration, backing up files
       pushd ${configDir}
       git add -A
-      home-manager switch -b backup --flake .#${cfg.machine}
+      home-manager switch -b backup --flake .#${cfg.configName}
       popd
     '';
   };
@@ -69,7 +72,7 @@ with lib; let
     '';
   };
 in {
-  options.modules.homeManagerScripts = {
+  options.modules.${module} = {
     enable = mkEnableOption ''
       Home manager scripts. Gives access to command-line scripts that make
       managing home-manager easier. These scripts are lean bash scripts that
@@ -100,13 +103,33 @@ in {
       '';
     };
 
-    machine = mkOption {
+    configName = mkOption {
       type = types.nullOr types.str;
       description = "**REQUIRED!** Path to the home-manager configuration.";
     };
   };
 
   config = mkIf cfg.enable {
+    
+    programs = {
+      direnv = {
+        enable = true;
+        enableBashIntegration = true;
+        enableZshIntegration = true;
+        nix-direnv.enable = false;
+      };
+          
+      fzf = {
+        enable = true;
+        enableBashIntegration = true;
+        enableZshIntegration = true;
+      };
+    };
+
+    news.display = "silent";
+    news.json = lib.mkForce { };
+    news.entries = lib.mkForce [ ];
+    
     home.packages = [
       hm-update
       hm-upgrade
@@ -114,6 +137,8 @@ in {
       hm-clean
       hm-rollback
       hm-help
+
+      pkgs.trash-cli
     ];
   };
 }

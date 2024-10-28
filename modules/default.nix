@@ -1,11 +1,11 @@
 {
   imports = [
-    ./homeManagerScripts.nix
     ./zsh
-    ./fonts.nix
-    ./yazi.nix
-    ./git.nix
     ./vscode
     ./tmux
+    ./fonts
+    ./yazi
+    ./git
+    ./terminal-tools
   ];
 }
