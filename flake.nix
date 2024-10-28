@@ -18,27 +18,24 @@
         inherit system;
         config.allowUnfree = true;
       };
+      mkConfig = (name: {
+        name = name;
+        value = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./configurations/${name}
+            self.homeManagerModules.default
+          ];
+        };
+      });
     in {
-      homeConfigurations = {
-        desktop = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./configurations/desktop
-            self.homeManagerModules.default
-          ];
-        };
-        
-        work = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./configurations/work
-            self.homeManagerModules.default
-          ];
-        };
-      };
       homeManagerModules = rec {
         modules = import ./modules;
         default = modules;
       };
+      homeConfigurations = (builtins.listToAttrs [
+        (mkConfig "desktop")
+        (mkConfig "work")
+      ]);
     };
 }
