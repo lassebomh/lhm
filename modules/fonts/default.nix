@@ -5,9 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.fonts;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
 in {
-  options.modules.fonts = {
+  options.modules.${module} = {
     enable = mkEnableOption "Enable my fonts, namely fira-code with nerdfonts. Note that this is required for modules that use the nerdfont icons to function properly.";
   };
 

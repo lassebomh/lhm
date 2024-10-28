@@ -5,9 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.zsh;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
 in {
-  options.modules.zsh = {
+  options.modules.${module} = {
     enable = mkEnableOption "zsh configuration.";
   };
 

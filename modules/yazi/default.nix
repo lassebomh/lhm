@@ -5,7 +5,8 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.yazi;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
   mkYaziPlugin = name:
     pkgs.stdenv.mkDerivation {
       name = name;
@@ -55,7 +56,7 @@ with lib; let
     };
   };
 in {
-  options.modules.yazi = {
+  options.modules.${module} = {
     enable = mkEnableOption "yazi file manager";
 
     configDir = mkOption {

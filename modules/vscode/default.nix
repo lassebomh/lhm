@@ -5,12 +5,13 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.vscode;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
   keybindings = (pkgs.lib.importJSON ./keybindings.json);
   userSettings = (pkgs.lib.importJSON ./settings.json);
   extensions = import ./extensions.nix { inherit pkgs; };
 in {
-  options.modules.vscode = {
+  options.modules.${module} = {
     enable = mkEnableOption "visual studio code.";
   };
 

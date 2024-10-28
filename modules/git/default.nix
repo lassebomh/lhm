@@ -5,9 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.git;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
 in {
-  options.modules.git = {
+  options.modules.${module} = {
     enable = mkEnableOption "git";
 
     email = mkOption {

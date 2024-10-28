@@ -5,10 +5,11 @@
   ...
 }:
 with lib; let
-  cfg = config.modules.tmux;
+  module = baseNameOf ./.;
+  cfg = config.modules.${module};
   extraConfig = (builtins.readFile ./extraConfig.sh);
 in {
-  options.modules.tmux = {
+  options.modules.${module} = {
     enable = mkEnableOption "tmux.";
   };
 
