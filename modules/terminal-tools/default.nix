@@ -116,7 +116,8 @@ in {
         enable = true;
         enableBashIntegration = true;
         enableZshIntegration = true;
-        nix-direnv.enable = false;
+        nix-direnv.enable = true;
+	silent = true;
       };
           
       fzf = {
