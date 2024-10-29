@@ -1,41 +1,40 @@
 { lib, pkgs, ... }:
-{  
+let
+  username = "lhb";
+  homeDirectory = "/home/lhb";
+  configDir = "/home/lhb/lhm";
+  
+  fullname = "Lasse H. Bomholt";
+  email = "lasse@bomh.net";
+in
+{
+  
   home = {
-    packages = with pkgs; [
-      trash-cli
-    ];
-
-    username = "lhb";
-    homeDirectory = "/home/lhb";
+    inherit username;
+    inherit homeDirectory;
 
     stateVersion = "23.11";
   };
 
   modules = {
-    fonts.enable = true;
+    
+    terminal-tools = {
+      enable = true;
+      configName = baseNameOf ./.;
+      inherit configDir;
+    };
+
     zsh.enable = true;
     yazi.enable = true;
-    vscode.enable = false;
-
-    homeManagerScripts = {
-      enable = true;
-      configDir = "/home/lhb/lhm";
-      configuration = "work";
-    };
+    tmux.enable = true;
 
     git = {
       enable = true;
-      userName = "Lasse H. Bomholt";
-      userEmail = "lasse@bomh.net";
+      inherit fullname;
+      inherit email;
     };
   };
 
-
-  # Disable home manager news
-  news.display = "silent";
-  news.json = lib.mkForce { };
-  news.entries = lib.mkForce [ ];
-  
   programs = {
     home-manager.enable = true;
 
