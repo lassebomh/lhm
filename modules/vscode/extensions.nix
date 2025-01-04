@@ -9,4 +9,6 @@
   bbenoist.nix
   ritwickdey.liveserver
   svelte.svelte-vscode
+  mkhl.direnv
+  rust-lang.rust-analyzer
 ]

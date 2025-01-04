@@ -1,0 +1,28 @@
+;; global configuration options
+(defcfg
+      process-unmapped-keys yes
+      log-layer-changes no
+)
+
+;; define keys that will be modified (all keys still processed)
+(defsrc
+      caps
+      h j k l
+)
+
+;; default/base layer modifications always active
+(deflayer default
+      @cap 
+      _ _ _ _
+)
+
+;; shifted layer activated by holding CAPS lock
+(deflayer cap-mod
+      _   
+      left down up rght
+)
+
+;; remapping between physical keys and functionality
+(defalias
+      cap (layer-toggle cap-mod)
+)

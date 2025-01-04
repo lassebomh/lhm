@@ -6,6 +6,7 @@ let
   
   fullname = "Lasse H. Bomholt";
   email = "lasse@bomh.net";
+
 in
 {  
   home = {
@@ -13,6 +14,16 @@ in
     inherit homeDirectory;
 
     stateVersion = "23.11";
+
+    packages = with pkgs; [
+      nmap
+      pipx
+      kanata
+    ];
+
+    sessionPath = [
+      "${homeDirectory}/.local/bin"
+    ];
   };
 
   modules = {
@@ -38,6 +49,11 @@ in
 
   programs = {
     home-manager.enable = true;
+    go.enable = true;
+    zsh.initExtra = ''
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      PATH=$PATH:${homeDirectory}/.local/bin
+    '';
 
     neovim = {
       enable = true;

@@ -80,5 +80,32 @@
     "key": "ctrl+shift+alt+x",
     "command": "workbench.action.tasks.terminate",
     "args": "terminateAll"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "alt+enter",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "alt+[",
+    "command": "workbench.action.navigateBack",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.navigateForward",
+    "when": "editorTextFocus"
   }
 ]

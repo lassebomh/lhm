@@ -1,4 +1,8 @@
 {
+  "gleam.path": "/home/linuxbrew/.linuxbrew/bin/gleam",
+  "prettier.printWidth": 120,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "direnv.restart.automatic": true,
   "explorer.compactFolders": false,
   "svelte.enable-ts-plugin": true,
   "explorer.confirmDragAndDrop": false,
@@ -62,5 +66,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "debug.onTaskErrors": "showErrors",
+  "zig.zls.enabled": "on"
 }
