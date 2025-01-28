@@ -1,4 +1,6 @@
 {
+  "editor.trimAutoWhitespace": false,
+
   "gleam.path": "/home/linuxbrew/.linuxbrew/bin/gleam",
   "prettier.printWidth": 120,
   "js/ts.implicitProjectConfig.checkJs": true,
@@ -68,5 +70,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "debug.onTaskErrors": "showErrors",
-  "zig.zls.enabled": "on"
+  "zig.zls.enabled": "on",
+
+  "workbench.editor.showTabs": "none",
+
+  "workbench.statusBar.visible": false,
+  "workbench.editor.enablePreview": false
 }
