@@ -59,6 +59,15 @@
   },
 
   {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+
+  {
     "key": "ctrl+shift+alt+a",
     "command": "workbench.action.tasks.runTask",
     "args": {
@@ -80,7 +89,13 @@
 
   {
     "key": "alt+j",
-    "command": "cursorDown"
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "cursorDown",
+    "when": "!suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
   },
   {
     "key": "alt+j",
@@ -110,7 +125,13 @@
 
   {
     "key": "alt+k",
-    "command": "cursorUp"
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "cursorUp",
+    "when": "!suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
   },
   {
     "key": "alt+k",
@@ -239,9 +260,15 @@
 
   {
     "key": "ctrl+space",
+    "command": "hideSuggestWidget",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
     "command": "runCommands",
+    "when": "!suggestWidgetVisible",
     "args": {
-      "commands": ["editor.action.triggerSuggest", "focusSuggestion", "editor.action.showHover"]
+      "commands": ["editor.action.triggerSuggest", "editor.action.showHover"]
     }
   },
   {
