@@ -259,41 +259,63 @@
   },
   {
     "key": "alt+u",
-    "command": "deleteLeft"
+    "command": "runCommands",
+    "args": {
+      "commands": ["deleteLeft", "sticky-selection.exitStickySelectionMode"]
+    }
   },
   {
     "key": "alt+ctrl+u",
-    "command": "deleteWordLeft"
+    "command": "runCommands",
+    "args": {
+      "commands": ["deleteWordLeft", "sticky-selection.exitStickySelectionMode"]
+    }
   },
   {
     "key": "alt+o",
-    "command": "deleteRight"
+    "command": "runCommands",
+    "args": {
+      "commands": ["deleteRight", "sticky-selection.exitStickySelectionMode"]
+    }
   },
   {
     "key": "alt+ctrl+o",
-    "command": "deleteWordRight"
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "deleteWordRight",
+        "sticky-selection.exitStickySelectionMode"
+      ]
+    }
   },
   {
     "key": "alt+i",
-    "command": "editor.action.insertLineAfter"
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.action.insertLineAfter"]
+    }
   },
+
+  { "key": "ctrl+c", "command": "-editor.action.clipboardCopyAction" },
   {
     "key": "ctrl+c",
     "command": "runCommands",
     "args": {
       "commands": [
-        "editor.action.clipboardCopyAction",
-        "sticky-selection.exitStickySelectionModePreserving"
+        "sticky-selection.exitStickySelectionModePreserving",
+        "editor.action.clipboardCopyAction"
       ]
     }
   },
+
+  { "key": "ctrl+x", "command": "-editor.action.clipboardCutAction" },
   {
     "key": "ctrl+x",
     "command": "runCommands",
     "args": {
       "commands": [
-        "editor.action.clipboardCutAction",
-        "sticky-selection.exitStickySelectionMode"
+        "sticky-selection.exitStickySelectionModePreserving",
+        "editor.action.clipboardCutAction"
       ]
     }
   },
@@ -302,6 +324,8 @@
     "command": "acceptSelectedSuggestion",
     "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
+  { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
+
   {
     "key": "ctrl+space",
     "command": "runCommands",
