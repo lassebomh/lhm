@@ -66,7 +66,6 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
   },
-
   {
     "key": "ctrl+shift+alt+a",
     "command": "workbench.action.tasks.runTask",
@@ -89,13 +88,13 @@
 
   {
     "key": "alt+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    "command": "cursorDown",
+    "when": "!suggestWidgetVisible"
   },
   {
     "key": "alt+j",
-    "command": "cursorDown",
-    "when": "!suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
   },
   {
     "key": "alt+j",
@@ -125,13 +124,13 @@
 
   {
     "key": "alt+k",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    "command": "cursorUp",
+    "when": "!suggestWidgetVisible"
   },
   {
     "key": "alt+k",
-    "command": "cursorUp",
-    "when": "!suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
   },
   {
     "key": "alt+k",
@@ -180,7 +179,8 @@
 
   {
     "key": "alt+h",
-    "command": "cursorLeft"
+    "command": "cursorLeft",
+    "when": "!suggestWidgetVisible"
   },
   {
     "key": "alt+h",
@@ -257,19 +257,67 @@
     "key": "alt+a",
     "when": "editorTextFocus && inStickySelectionMode"
   },
-
   {
-    "key": "ctrl+space",
-    "command": "hideSuggestWidget",
-    "when": "suggestWidgetVisible"
+    "key": "alt+u",
+    "command": "deleteLeft"
+  },
+  {
+    "key": "alt+ctrl+u",
+    "command": "deleteWordLeft"
+  },
+  {
+    "key": "alt+o",
+    "command": "deleteRight"
+  },
+  {
+    "key": "alt+ctrl+o",
+    "command": "deleteWordRight"
+  },
+  {
+    "key": "alt+i",
+    "command": "editor.action.insertLineAfter"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "editor.action.clipboardCopyAction",
+        "sticky-selection.exitStickySelectionModePreserving"
+      ]
+    }
+  },
+  {
+    "key": "ctrl+x",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "editor.action.clipboardCutAction",
+        "sticky-selection.exitStickySelectionMode"
+      ]
+    }
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
   {
     "key": "ctrl+space",
     "command": "runCommands",
-    "when": "!suggestWidgetVisible",
     "args": {
-      "commands": ["editor.action.triggerSuggest", "editor.action.showHover"]
-    }
+      "commands": [
+        "editor.action.triggerSuggest",
+        "focusSuggestion",
+        "editor.action.showHover"
+      ]
+    },
+    "when": "!suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "hideSuggestWidget",
+    "when": "suggestWidgetVisible"
   },
   {
     "key": "ctrl+space",
