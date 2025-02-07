@@ -87,22 +87,22 @@
   },
 
   {
-    "key": "alt+j",
+    "key": "alt+k",
     "command": "cursorDown",
     "when": "!suggestWidgetVisible"
   },
   {
-    "key": "alt+j",
+    "key": "alt+k",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible"
   },
   {
-    "key": "alt+j",
+    "key": "alt+k",
     "command": "cursorDownSelect",
     "when": "inStickySelectionMode"
   },
   {
-    "key": "ctrl+alt+j",
+    "key": "ctrl+alt+k",
     "command": "cursorMove",
     "args": {
       "to": "down",
@@ -111,7 +111,7 @@
     }
   },
   {
-    "key": "ctrl+alt+j",
+    "key": "ctrl+alt+k",
     "when": "inStickySelectionMode",
     "command": "cursorMove",
     "args": {
@@ -123,22 +123,22 @@
   },
 
   {
-    "key": "alt+k",
+    "key": "alt+l",
     "command": "cursorUp",
     "when": "!suggestWidgetVisible"
   },
   {
-    "key": "alt+k",
+    "key": "alt+l",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible"
   },
   {
-    "key": "alt+k",
+    "key": "alt+l",
     "when": "inStickySelectionMode",
     "command": "cursorUpSelect"
   },
   {
-    "key": "ctrl+alt+k",
+    "key": "ctrl+alt+l",
     "command": "cursorMove",
     "args": {
       "to": "up",
@@ -147,7 +147,7 @@
     }
   },
   {
-    "key": "ctrl+alt+k",
+    "key": "ctrl+alt+l",
     "when": "inStickySelectionMode",
     "command": "cursorMove",
     "args": {
@@ -159,92 +159,102 @@
   },
 
   {
-    "key": "alt+l",
+    "key": "alt+;",
     "command": "cursorRight"
   },
   {
-    "key": "alt+l",
+    "key": "alt+;",
     "when": "inStickySelectionMode",
     "command": "cursorRightSelect"
   },
   {
-    "key": "ctrl+alt+l",
+    "key": "ctrl+alt+;",
     "command": "cursorWordRight"
   },
   {
-    "key": "ctrl+alt+l",
+    "key": "ctrl+alt+;",
     "when": "inStickySelectionMode",
     "command": "cursorWordRightSelect"
   },
 
   {
-    "key": "alt+h",
+    "key": "alt+j",
     "command": "cursorLeft",
     "when": "!suggestWidgetVisible"
   },
   {
-    "key": "alt+h",
+    "key": "alt+j",
     "when": "inStickySelectionMode",
     "command": "cursorLeftSelect"
   },
   {
-    "key": "ctrl+alt+h",
+    "key": "ctrl+alt+j",
     "command": "cursorWordLeft"
   },
   {
-    "key": "ctrl+alt+h",
+    "key": "ctrl+alt+j",
     "when": "inStickySelectionMode",
     "command": "cursorWordLeftSelect"
   },
 
   {
-    "key": "alt+b",
+    "key": "alt+n",
     "command": "cursorWordLeft",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+b",
+    "key": "alt+n",
     "command": "cursorWordLeftSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
 
   {
-    "key": "alt+g",
+    "key": "alt+h",
     "command": "cursorHome",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+g",
+    "key": "alt+h",
     "command": "cursorHomeSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
 
   {
-    "key": "alt+n",
+    "key": "alt+m",
     "command": "cursorWordRight",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+n",
+    "key": "alt+m",
     "command": "cursorWordRightSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
 
   {
-    "key": "alt+;",
+    "key": "alt+'",
     "command": "cursorEnd",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+;",
+    "key": "alt+'",
     "command": "cursorEndSelect",
     "when": "editorTextFocus && inStickySelectionMode"
   },
 
   {
-    "key": "alt+m",
-    "command": "editor.action.goToDeclaration",
+    "key": "alt+,",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        // "editor.action.goToImplementation",
+        "editor.action.goToDeclaration"
+      ]
+    },
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+shift+,",
+    "command": "workbench.action.navigateBack"
   },
 
   {
@@ -258,28 +268,28 @@
     "when": "editorTextFocus && inStickySelectionMode"
   },
   {
-    "key": "alt+u",
+    "key": "alt+i",
     "command": "runCommands",
     "args": {
       "commands": ["deleteLeft", "sticky-selection.exitStickySelectionMode"]
     }
   },
   {
-    "key": "alt+ctrl+u",
+    "key": "alt+ctrl+i",
     "command": "runCommands",
     "args": {
       "commands": ["deleteWordLeft", "sticky-selection.exitStickySelectionMode"]
     }
   },
   {
-    "key": "alt+o",
+    "key": "alt+p",
     "command": "runCommands",
     "args": {
       "commands": ["deleteRight", "sticky-selection.exitStickySelectionMode"]
     }
   },
   {
-    "key": "alt+ctrl+o",
+    "key": "alt+ctrl+p",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -289,16 +299,18 @@
     }
   },
   {
-    "key": "alt+i",
-    "command": "runCommands",
-    "args": {
-      "commands": ["editor.action.insertLineAfter"]
-    }
+    "key": "alt+o",
+    "command": "editor.action.insertLineAfter"
+  },
+  {
+    "key": "alt+shift+o",
+    "command": "editor.action.insertLineBefore"
   },
 
   { "key": "ctrl+c", "command": "-editor.action.clipboardCopyAction" },
   {
     "key": "ctrl+c",
+    "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -311,6 +323,7 @@
   { "key": "ctrl+x", "command": "-editor.action.clipboardCutAction" },
   {
     "key": "ctrl+x",
+    "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
       "commands": [
