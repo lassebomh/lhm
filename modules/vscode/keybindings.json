@@ -92,6 +92,10 @@
     "when": "!suggestWidgetVisible"
   },
   {
+    "key": "shift+alt+k",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
     "key": "alt+k",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible"
@@ -137,6 +141,11 @@
     "when": "inStickySelectionMode",
     "command": "cursorUpSelect"
   },
+  {
+    "key": "shift+alt+l",
+    "command": "editor.action.moveLinesUpAction"
+  },
+
   {
     "key": "ctrl+alt+l",
     "command": "cursorMove",
@@ -245,10 +254,7 @@
     "key": "alt+,",
     "command": "runCommands",
     "args": {
-      "commands": [
-        // "editor.action.goToImplementation",
-        "editor.action.goToDeclaration"
-      ]
+      "commands": ["editor.action.goToDeclaration"]
     },
     "when": "editorTextFocus"
   },
