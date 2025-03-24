@@ -7,7 +7,7 @@
 with lib; let
   module = baseNameOf ./.;
   cfg = config.modules.${module};
-  extraConfig = (builtins.readFile ./extraConfig.sh);
+  extraConfig = builtins.readFile ./extraConfig.sh;
 in {
   options.modules.${module} = {
     enable = mkEnableOption "tmux.";
@@ -21,6 +21,3 @@ in {
     };
   };
 }
-
-
-

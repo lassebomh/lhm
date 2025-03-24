@@ -1,7 +1,5 @@
-{
-  pkgs,
-  ...
-}: with pkgs.vscode-extensions; [
+{pkgs, ...}:
+with pkgs.vscode-extensions; [
   nonylene.dark-molokai-theme
   esbenp.prettier-vscode
   golang.go

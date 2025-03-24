@@ -23,19 +23,18 @@ in {
   };
 
   config = mkIf cfg.enable {
-    
     programs.gh = {
       enable = true;
     };
 
     programs.git = {
       enable = true;
-      
+
       userEmail = cfg.email;
       userName = cfg.fullname;
 
       difftastic.enable = true;
-      
+
       extraConfig = {
         init.defaultBranch = "main";
       };

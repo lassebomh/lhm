@@ -13,6 +13,8 @@ in {
   };
 
   config = mkIf cfg.enable {
+    # Suggest nix package when command is not recognized
+    programs.nix-index.enable = true;
 
     programs.starship = {
       enable = true;

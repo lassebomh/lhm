@@ -117,7 +117,7 @@ in {
             #   desc = "Create a directory";
             # }
             {
-              on = [ "m" "f" ];
+              on = ["m" "f"];
               run = "create";
               desc = "Create a file";
             }
@@ -235,7 +235,10 @@ in {
       settings = {
         plugin = {
           prepend_previewers = [
-              { mime = "audio/*"; run = "exifaudio"; }
+            {
+              mime = "audio/*";
+              run = "exifaudio";
+            }
           ];
           prepend_fetchers = [
             {
