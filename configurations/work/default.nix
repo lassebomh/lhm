@@ -1,14 +1,15 @@
-{ lib, pkgs, ... }:
-let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   username = "lhb";
   homeDirectory = "/home/lhb";
   configDir = "/home/lhb/lhm";
-  
+
   fullname = "Lasse H. Bomholt";
   email = "lasse@bomh.net";
-in
-{
-  
+in {
   home = {
     inherit username;
     inherit homeDirectory;
@@ -17,7 +18,6 @@ in
   };
 
   modules = {
-    
     terminal-tools = {
       enable = true;
       configName = baseNameOf ./.;
@@ -42,5 +42,5 @@ in
       enable = true;
       defaultEditor = true;
     };
-   };
+  };
 }
