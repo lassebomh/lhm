@@ -51,7 +51,6 @@ in {
     home-manager.enable = true;
     go.enable = true;
     zsh.initExtra = ''
-      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
       PATH=$PATH:${homeDirectory}/.local/bin
     '';
 

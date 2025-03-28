@@ -57,7 +57,6 @@
   "files.associations": {
     "*.sql": "sqlite"
   },
-  "gleam.path": "/home/linuxbrew/.linuxbrew/bin/gleam",
   "go.toolsManagement.autoUpdate": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.checkJs": true,
@@ -77,6 +76,5 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "multiple",
   "workbench.layoutControl.enabled": false,
-  "workbench.statusBar.visible": false,
   "zig.zls.enabled": "on"
 }

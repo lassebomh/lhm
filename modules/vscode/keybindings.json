@@ -188,8 +188,7 @@
 
   {
     "key": "alt+j",
-    "command": "cursorLeft",
-    "when": "!suggestWidgetVisible"
+    "command": "cursorLeft"
   },
   {
     "key": "alt+j",
@@ -298,10 +297,7 @@
     "key": "alt+ctrl+p",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "deleteWordRight",
-        "sticky-selection.exitStickySelectionMode"
-      ]
+      "commands": ["deleteWordRight", "sticky-selection.exitStickySelectionMode"]
     }
   },
   {
@@ -319,10 +315,7 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "sticky-selection.exitStickySelectionModePreserving",
-        "editor.action.clipboardCopyAction"
-      ]
+      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCopyAction"]
     }
   },
 
@@ -332,10 +325,7 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "sticky-selection.exitStickySelectionModePreserving",
-        "editor.action.clipboardCutAction"
-      ]
+      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCutAction"]
     }
   },
   {
@@ -346,30 +336,11 @@
   { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
 
   {
-    "key": "ctrl+space",
+    "key": "ctrl+shift+space",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "editor.action.triggerSuggest",
-        "focusSuggestion",
-        "editor.action.showHover"
-      ]
-    },
-    "when": "!suggestWidgetVisible"
+      "commands": ["editor.action.showHover"]
+    }
   },
-  {
-    "key": "ctrl+space",
-    "command": "hideSuggestWidget",
-    "when": "suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+space",
-    "command": "-editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+space",
-    "command": "-toggleSuggestionDetails",
-    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-  }
+  { "key": "ctrl+space", "command": "-sticky-selection.enterStickySelectionMode", "when": "editorTextFocus" }
 ]
