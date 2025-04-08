@@ -76,5 +76,10 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "multiple",
   "workbench.layoutControl.enabled": false,
-  "zig.zls.enabled": "on"
+  "zig.zls.enabled": "on",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false
 }
