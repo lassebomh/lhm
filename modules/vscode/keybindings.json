@@ -82,8 +82,21 @@
   },
   {
     "key": "ctrl+shift+alt+x",
-    "command": "workbench.action.tasks.terminate",
-    "args": "terminateAll"
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "workbench.action.tasks.terminate",
+          "args": "terminateAll"
+        },
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": {
+            "task": "Kill node+dotnet"
+          }
+        }
+      ]
+    }
   },
 
   {
@@ -106,6 +119,12 @@
     "when": "inStickySelectionMode"
   },
   {
+    "key": "ctrl+alt+k",
+    "when": "suggestWidgetVisible",
+    "command": "cursorDown"
+  },
+  {
+    "when": "!suggestWidgetVisible",
     "key": "ctrl+alt+k",
     "command": "cursorMove",
     "args": {
@@ -145,8 +164,13 @@
     "key": "shift+alt+l",
     "command": "editor.action.moveLinesUpAction"
   },
-
   {
+    "key": "ctrl+alt+l",
+    "when": "suggestWidgetVisible",
+    "command": "cursorUp"
+  },
+  {
+    "when": "!suggestWidgetVisible",
     "key": "ctrl+alt+l",
     "command": "cursorMove",
     "args": {
@@ -206,17 +230,6 @@
   },
 
   {
-    "key": "alt+n",
-    "command": "cursorWordLeft",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+n",
-    "command": "cursorWordLeftSelect",
-    "when": "editorTextFocus && inStickySelectionMode"
-  },
-
-  {
     "key": "alt+h",
     "command": "cursorHome",
     "when": "editorTextFocus"
@@ -239,6 +252,36 @@
   },
 
   {
+    "key": "alt+n",
+    "command": "cursorWordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+n",
+    "command": "cursorWordLeftSelect",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+
+  {
+    "key": "alt+shift+n",
+    "command": "workbench.action.navigateBack"
+  },
+
+  {
+    "key": "alt+shift+m",
+    "command": "workbench.action.navigateForward"
+  },
+
+  {
+    "key": "alt+b",
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.action.goToDeclaration"]
+    },
+    "when": "editorTextFocus"
+  },
+
+  {
     "key": "alt+'",
     "command": "cursorEnd",
     "when": "editorTextFocus"
@@ -247,19 +290,6 @@
     "key": "alt+'",
     "command": "cursorEndSelect",
     "when": "editorTextFocus && inStickySelectionMode"
-  },
-
-  {
-    "key": "alt+,",
-    "command": "runCommands",
-    "args": {
-      "commands": ["editor.action.goToDeclaration"]
-    },
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+shift+,",
-    "command": "workbench.action.navigateBack"
   },
 
   {
@@ -297,7 +327,10 @@
     "key": "alt+ctrl+p",
     "command": "runCommands",
     "args": {
-      "commands": ["deleteWordRight", "sticky-selection.exitStickySelectionMode"]
+      "commands": [
+        "deleteWordRight",
+        "sticky-selection.exitStickySelectionMode"
+      ]
     }
   },
   {
@@ -315,7 +348,10 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCopyAction"]
+      "commands": [
+        "sticky-selection.exitStickySelectionModePreserving",
+        "editor.action.clipboardCopyAction"
+      ]
     }
   },
 
@@ -325,7 +361,10 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCutAction"]
+      "commands": [
+        "sticky-selection.exitStickySelectionModePreserving",
+        "editor.action.clipboardCutAction"
+      ]
     }
   },
   {
@@ -336,11 +375,34 @@
   { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
 
   {
-    "key": "ctrl+shift+space",
+    "key": "ctrl+space",
     "command": "runCommands",
     "args": {
-      "commands": ["editor.action.showHover"]
-    }
+      "commands": [
+        "editor.action.triggerSuggest",
+        "focusSuggestion",
+        "editor.action.showHover"
+      ]
+    },
+    "when": "!suggestWidgetVisible"
   },
-  { "key": "ctrl+space", "command": "-sticky-selection.enterStickySelectionMode", "when": "editorTextFocus" }
+  {
+    "key": "alt+s",
+    "command": "eslint.executeAutofix"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "hideSuggestWidget",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-toggleSuggestionDetails",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+  }
 ]
