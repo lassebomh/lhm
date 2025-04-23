@@ -310,7 +310,7 @@
     }
   },
   {
-    "key": "alt+ctrl+i",
+    "key": "alt+shift+i",
     "command": "runCommands",
     "args": {
       "commands": ["deleteWordLeft", "sticky-selection.exitStickySelectionMode"]
@@ -324,13 +324,10 @@
     }
   },
   {
-    "key": "alt+ctrl+p",
+    "key": "alt+shift+p",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "deleteWordRight",
-        "sticky-selection.exitStickySelectionMode"
-      ]
+      "commands": ["deleteWordRight", "sticky-selection.exitStickySelectionMode"]
     }
   },
   {
@@ -348,10 +345,7 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "sticky-selection.exitStickySelectionModePreserving",
-        "editor.action.clipboardCopyAction"
-      ]
+      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCopyAction"]
     }
   },
 
@@ -361,10 +355,7 @@
     "when": "editorTextFocus",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "sticky-selection.exitStickySelectionModePreserving",
-        "editor.action.clipboardCutAction"
-      ]
+      "commands": ["sticky-selection.exitStickySelectionModePreserving", "editor.action.clipboardCutAction"]
     }
   },
   {
@@ -378,11 +369,7 @@
     "key": "ctrl+space",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "editor.action.triggerSuggest",
-        "focusSuggestion",
-        "editor.action.showHover"
-      ]
+      "commands": ["editor.action.triggerSuggest", "focusSuggestion", "editor.action.showHover"]
     },
     "when": "!suggestWidgetVisible"
   },
@@ -404,5 +391,88 @@
     "key": "ctrl+space",
     "command": "-toggleSuggestionDetails",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-  }
+  },
+
+  {
+    "key": "ctrl+i",
+    "command": "-inlineChat.startWithCurrentLine",
+    "when": "inlineChatHasProvider && inlineChatShowingHint && !editorReadonly && !inlineChatVisible"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
+  },
+
+  { "key": "ctrl+escape", "command": "-workbench.action.chat.cancel" },
+  {
+    "key": "ctrl+down",
+    "command": "-workbench.action.chat.focusInput",
+    "when": "inChat && !inChatInput && !quickChatHasFocus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-workbench.action.chat.focusInput",
+    "when": "inChat && quickChatHasFocus && !inChatInput"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-workbench.action.chat.holdToVoiceChatInChatView",
+    "when": "chatIsEnabled && hasSpeechProvider && !chatSessionRequestInProgress && !editorFocus && !inChatInput && !inlineChatFocused && !notebookEditorFocused && !searchViewletFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && !config.chat.unifiedChatView && chatLocation != 'editing-session'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newEditSession",
+    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+  },
+  { "key": "ctrl+alt+pagedown", "command": "-workbench.action.chat.nextCodeBlock", "when": "chatIsEnabled && inChat" },
+  { "key": "ctrl+f9", "command": "-workbench.action.chat.nextFileTree", "when": "chatIsEnabled && inChat" },
+  { "key": "ctrl+alt+i", "command": "-workbench.action.chat.open", "when": "!chatSetupHidden" },
+  {
+    "key": "ctrl+shift+alt+i",
+    "command": "-workbench.action.chat.openEditSession",
+    "when": "chatEditingParticipantRegistered && !chatSetupHidden && view != 'workbench.panel.chat.view.edits'"
+  },
+  {
+    "key": "ctrl+alt+pageup",
+    "command": "-workbench.action.chat.previousCodeBlock",
+    "when": "chatIsEnabled && inChat"
+  },
+  { "key": "ctrl+shift+f9", "command": "-workbench.action.chat.previousFileTree", "when": "chatIsEnabled && inChat" },
+  {
+    "key": "delete",
+    "command": "-workbench.action.chat.remove",
+    "when": "inChat && !config.chat.unifiedChatView && !inChatInput && chatMode == 'ask'"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "-workbench.action.chat.sendToChatEditing",
+    "when": "chatEditingParticipantRegistered && chatInputHasText && chatIsEnabled && chatRequestIsPaused && !chatInputHasAgent && !inUnifiedChat && chatLocation == 'panel' && chatLocation != 'editing-session' && chatLocation != 'editor' || chatEditingParticipantRegistered && chatInputHasText && chatIsEnabled && !chatInputHasAgent && !chatSessionRequestInProgress && !inUnifiedChat && chatLocation == 'panel' && chatLocation != 'editing-session' && chatLocation != 'editor' || chatEditingParticipantRegistered && chatInstructionsAttached && chatIsEnabled && chatRequestIsPaused && !chatInputHasAgent && !inUnifiedChat && chatLocation == 'panel' && chatLocation != 'editing-session' && chatLocation != 'editor' || chatEditingParticipantRegistered && chatInstructionsAttached && chatIsEnabled && !chatInputHasAgent && !chatSessionRequestInProgress && !inUnifiedChat && chatLocation == 'panel' && chatLocation != 'editing-session' && chatLocation != 'editor'"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "-workbench.action.chat.sendToNewChat",
+    "when": "chatInputHasText && chatRequestIsPaused && inChatInput || chatInputHasText && inChatInput && !chatSessionRequestInProgress || chatInstructionsAttached && chatRequestIsPaused && inChatInput || chatInstructionsAttached && inChatInput && !chatSessionRequestInProgress"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-workbench.action.chat.startVoiceChat",
+    "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-workbench.action.chat.stopListeningAndSubmit",
+    "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
+  },
+  {
+    "key": "ctrl+alt+.",
+    "command": "-workbench.action.chat.switchToNextModel",
+    "when": "chatIsEnabled && inChatInput"
+  },
+  { "key": "delete", "command": "-workbench.action.chat.undoEdits" }
 ]
