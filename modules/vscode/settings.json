@@ -1,29 +1,15 @@
 {
   "$schema": "vscode://schemas/settings/user",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
+  "[xml]": { "editor.defaultFormatter": "redhat.vscode-xml" },
 
   "debug.onTaskErrors": "showErrors",
   "direnv.restart.automatic": true,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 3,
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
@@ -55,6 +41,7 @@
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
     "tsconfig.json": "tsconfig.*.json"
   },
+
   "chat.commandCenter.enabled": false,
   "chat.detectParticipant.enabled": false,
   "chat.extensionTools.enabled": false,
@@ -66,22 +53,65 @@
   "files.associations": {
     "*.sql": "sqlite"
   },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.turbo": true,
+    "**/vite.config.*.timestamp*": true,
+    "**/dist": true
+    // "**/.editorconfig": true,
+    // "**/.dockerignore": true,
+    // "**/*.code-workspace": true,
+    // "**/*.esproj": true,
+    // "**/.eslintrc.*": true,
+    // "**/.prettierrc.*": true,
+    // "**/eslint.*": true,
+    // "**/playwright.config.*": true,
+    // "**/postcss.config.*": true,
+    // "**/typedoc.json": true,
+    // "**/pnpm-lock.yaml": true,
+    // "**/node_modules": true,
+    // "**/.github": true,
+    // "**/pnpm-workspace.yaml": true,
+    // "**/tsconfig.json": true,
+    // "**/tsconfig.node.json": true,
+    // "**/svelte.config.*": true,
+    // "**/vite.config.*": true,
+    // "**/*.md": true,
+    // "**/.gitignore": true,
+    // "**/.env": true
+  },
+
   "go.toolsManagement.autoUpdate": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.checkJs": true,
+
+  "jupyter.askForKernelRestart": false,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.output.wordWrap": true,
+  "python.createEnvironment.trigger": "off",
   "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
   "prettier.printWidth": 120,
   "security.workspace.trust.untrustedFiles": "open",
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
   "svelte.enable-ts-plugin": true,
   "tailwindCSS.includeLanguages": {
     "templ": "html"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": false,
-  "window.menuBarVisibility": "compact",
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.location": "bottom",
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Dark (Molokai)",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizing": "shrink",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "multiple",
   "workbench.layoutControl.enabled": false,
@@ -90,5 +120,37 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.enableSmartCommit": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+
+  "editor.detectIndentation": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.cursorSurroundingLines": 14,
+  "editor.cursorSurroundingLinesStyle": "default",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.minimap.showSlider": "always",
+  "editor.stickyTabStops": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "none",
+  "editor.hover.delay": 150,
+
+  "git.autofetch": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.pullBranch": "never",
+  "redhat.telemetry.enabled": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.workspace.trust.enabled": false,
+  "task.allowAutomaticTasks": "on",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 14,
+
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": false
 }
