@@ -88,12 +88,6 @@
         {
           "command": "workbench.action.tasks.terminate",
           "args": "terminateAll"
-        },
-        {
-          "command": "workbench.action.tasks.runTask",
-          "args": {
-            "task": "Kill node+dotnet"
-          }
         }
       ]
     }
@@ -317,6 +311,14 @@
     }
   },
   {
+    "key": "ctrl+i",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.nextEditor"
+  },
+  {
     "key": "alt+p",
     "command": "runCommands",
     "args": {
@@ -430,9 +432,21 @@
     "command": "-workbench.action.chat.newEditSession",
     "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
   },
-  { "key": "ctrl+alt+pagedown", "command": "-workbench.action.chat.nextCodeBlock", "when": "chatIsEnabled && inChat" },
-  { "key": "ctrl+f9", "command": "-workbench.action.chat.nextFileTree", "when": "chatIsEnabled && inChat" },
-  { "key": "ctrl+alt+i", "command": "-workbench.action.chat.open", "when": "!chatSetupHidden" },
+  {
+    "key": "ctrl+alt+pagedown",
+    "command": "-workbench.action.chat.nextCodeBlock",
+    "when": "chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+f9",
+    "command": "-workbench.action.chat.nextFileTree",
+    "when": "chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.action.chat.open",
+    "when": "!chatSetupHidden"
+  },
   {
     "key": "ctrl+shift+alt+i",
     "command": "-workbench.action.chat.openEditSession",
@@ -443,7 +457,11 @@
     "command": "-workbench.action.chat.previousCodeBlock",
     "when": "chatIsEnabled && inChat"
   },
-  { "key": "ctrl+shift+f9", "command": "-workbench.action.chat.previousFileTree", "when": "chatIsEnabled && inChat" },
+  {
+    "key": "ctrl+shift+f9",
+    "command": "-workbench.action.chat.previousFileTree",
+    "when": "chatIsEnabled && inChat"
+  },
   {
     "key": "delete",
     "command": "-workbench.action.chat.remove",
