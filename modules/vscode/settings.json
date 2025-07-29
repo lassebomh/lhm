@@ -23,6 +23,7 @@
   "emmet.includeLanguages": {
     "templ": "html"
   },
+
   "search.quickOpen.includeHistory": false,
   "explorer.openEditors.visible": 99,
   "explorer.openEditors.minVisible": 30,
@@ -67,28 +68,6 @@
     "**/Thumbs.db": true,
     "**/.turbo": true,
     "**/vite.config.*.timestamp*": true
-    // "**/dist": true
-    // "**/.editorconfig": true,
-    // "**/.dockerignore": true,
-    // "**/*.code-workspace": true,
-    // "**/*.esproj": true,
-    // "**/.eslintrc.*": true,
-    // "**/.prettierrc.*": true,
-    // "**/eslint.*": true,
-    // "**/playwright.config.*": true,
-    // "**/postcss.config.*": true,
-    // "**/typedoc.json": true,
-    // "**/pnpm-lock.yaml": true,
-    // "**/node_modules": true,
-    // "**/.github": true,
-    // "**/pnpm-workspace.yaml": true,
-    // "**/tsconfig.json": true,
-    // "**/tsconfig.node.json": true,
-    // "**/svelte.config.*": true,
-    // "**/vite.config.*": true,
-    // "**/*.md": true,
-    // "**/.gitignore": true,
-    // "**/.env": true
   },
 
   "go.toolsManagement.autoUpdate": true,
@@ -122,6 +101,7 @@
     "templ": "html"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.customMenuBarAltFocus": false,
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Dark (Molokai)",
