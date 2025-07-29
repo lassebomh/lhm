@@ -152,5 +152,6 @@
   },
   "workbench.startupEditor": "none",
   "playwright.reuseBrowser": false,
-  "workbench.editor.tabSizing": "shrink"
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.activityBar.location": "top"
 }
