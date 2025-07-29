@@ -255,7 +255,8 @@
     "command": "runCommands",
     "args": {
       "commands": ["deleteLeft", "sticky-selection.exitStickySelectionMode"]
-    }
+    },
+    "when": "editorTextFocus"
   },
   {
     "key": "alt+shift+i",
@@ -265,11 +266,11 @@
     }
   },
   {
-    "key": "ctrl+alt+i",
+    "key": "ctrl+i",
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "ctrl+alt+o",
+    "key": "ctrl+o",
     "command": "workbench.action.previousEditor"
   },
   {
