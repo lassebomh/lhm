@@ -266,11 +266,11 @@
     }
   },
   {
-    "key": "ctrl+i",
+    "key": "ctrl+l",
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "ctrl+o",
+    "key": "ctrl+k",
     "command": "workbench.action.previousEditor"
   },
   {
