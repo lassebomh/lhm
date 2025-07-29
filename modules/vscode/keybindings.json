@@ -1,6 +1,10 @@
 [
   {
-    "key": "ctrl+shift+d",
+    "key": "ctrl+e",
+    "command": "editor.action.moveSelectionToPreviousFindMatch"
+  },
+  {
+    "key": "ctrl+r",
     "command": "editor.action.moveSelectionToNextFindMatch"
   },
   {
