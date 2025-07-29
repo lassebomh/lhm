@@ -3,8 +3,9 @@
 
   "[xml]": { "editor.defaultFormatter": "redhat.vscode-xml" },
 
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
   "debug.onTaskErrors": "showErrors",
-  "direnv.restart.automatic": true,
+  "direnv.restart.automatic": false,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
@@ -61,8 +62,8 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/.turbo": true,
-    "**/vite.config.*.timestamp*": true,
-    "**/dist": true
+    "**/vite.config.*.timestamp*": true
+    // "**/dist": true
     // "**/.editorconfig": true,
     // "**/.dockerignore": true,
     // "**/*.code-workspace": true,
@@ -91,6 +92,17 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.checkJs": true,
 
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "info" }],
+  "eslint.codeAction.disableRuleComment": {
+    "enable": false
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "always",
+    "source.removeUnusedImports": "always"
+  },
   "jupyter.askForKernelRestart": false,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
@@ -108,12 +120,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Dark (Molokai)",
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.tabSizing": "shrink",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.showTabs": "none",
   "workbench.layoutControl.enabled": false,
   "zig.zls.enabled": "on",
   "[css]": {
@@ -134,7 +144,7 @@
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "none",
-  "editor.hover.delay": 150,
+  "editor.hover.delay": 300,
 
   "git.autofetch": true,
   "git.ignoreMissingGitWarning": true,
@@ -146,11 +156,17 @@
   "security.allowedUNCHosts": ["wsl.localhost"],
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.enabled": false,
-  "task.allowAutomaticTasks": "on",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontSize": 14,
-
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
   "diffEditor.experimental.showMoves": true,
   "diffEditor.ignoreTrimWhitespace": true,
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "diffEditor.experimental.useTrueInlineView": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "playwright.reuseBrowser": false,
+  "workbench.editor.tabSizing": "shrink"
 }
