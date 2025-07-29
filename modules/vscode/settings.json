@@ -27,7 +27,7 @@
   "search.quickOpen.includeHistory": false,
   "explorer.openEditors.visible": 99,
   "explorer.openEditors.minVisible": 30,
-  "explorer.openEditors.sortOrder": "fullPath",
+  "explorer.openEditors.sortOrder": "editorOrder",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
