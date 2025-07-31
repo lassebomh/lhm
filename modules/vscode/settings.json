@@ -25,10 +25,12 @@
   },
 
   "search.quickOpen.includeHistory": false,
-  "explorer.openEditors.visible": 99,
-  "explorer.openEditors.minVisible": 30,
+  "workbench.tree.stickyScrollMaxItemCount": 3,
+  "workbench.tree.renderIndentGuides": "always",
+  "explorer.openEditors.visible": 20,
+  "explorer.openEditors.minVisible": 0,
   "explorer.openEditors.sortOrder": "editorOrder",
-  "explorer.compactFolders": false,
+  "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
@@ -47,7 +49,6 @@
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
     "tsconfig.json": "tsconfig.*.json"
   },
-
   "chat.commandCenter.enabled": false,
   "chat.detectParticipant.enabled": false,
   "chat.extensionTools.enabled": false,
@@ -153,5 +154,6 @@
   "workbench.startupEditor": "none",
   "playwright.reuseBrowser": false,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "editor.minimap.renderCharacters": false
 }
