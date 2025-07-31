@@ -8,6 +8,10 @@
     "command": "editor.action.moveSelectionToNextFindMatch"
   },
   {
+    "command": "git.checkout",
+    "key": "ctrl+shift+alt+z"
+  },
+  {
     "args": {
       "task": "ALL: init+run"
     },
@@ -27,6 +31,12 @@
         {
           "args": "terminateAll",
           "command": "workbench.action.tasks.terminate"
+        },
+        {
+          "args": {
+            "task": "Kill node+dotnet (linux)"
+          },
+          "command": "workbench.action.tasks.runTask"
         }
       ]
     },
