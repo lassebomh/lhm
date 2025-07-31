@@ -90,7 +90,7 @@
   },
   {
     "command": "workbench.action.quickOpenSelectPrevious",
-    "key": "ctrl+alt+l",
+    "key": "alt+l",
     "when": "inQuickInput"
   },
   {
@@ -213,11 +213,11 @@
   },
   {
     "command": "workbench.action.navigateBack",
-    "key": "alt+shift+n"
+    "key": "ctrl+j"
   },
   {
     "command": "workbench.action.navigateForward",
-    "key": "alt+shift+m"
+    "key": "ctrl+;"
   },
   {
     "args": {
