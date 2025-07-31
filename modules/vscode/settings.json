@@ -25,7 +25,7 @@
   },
 
   "search.quickOpen.includeHistory": false,
-  "workbench.tree.stickyScrollMaxItemCount": 3,
+  "workbench.tree.stickyScrollMaxItemCount": 2,
   "workbench.tree.renderIndentGuides": "always",
   "explorer.openEditors.visible": 20,
   "explorer.openEditors.minVisible": 0,
@@ -107,7 +107,7 @@
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Dark (Molokai)",
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": true,
   "workbench.editor.showTabs": "none",
   "workbench.layoutControl.enabled": false,
   "zig.zls.enabled": "on",
@@ -154,6 +154,5 @@
   "workbench.startupEditor": "none",
   "playwright.reuseBrowser": false,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.activityBar.location": "top",
-  "editor.minimap.renderCharacters": false
+  "workbench.activityBar.location": "top"
 }
