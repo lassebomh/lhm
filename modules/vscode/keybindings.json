@@ -105,7 +105,6 @@
   {
     "args": {
       "by": "line",
-      "select": true,
       "to": "up",
       "value": 5
     },
