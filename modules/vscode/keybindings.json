@@ -107,7 +107,7 @@
     "args": {
       "by": "line",
       "select": true,
-      "to": "down",
+      "to": "up",
       "value": 5
     },
     "command": "cursorMove",
