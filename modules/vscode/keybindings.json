@@ -100,7 +100,7 @@
       "value": 5
     },
     "command": "cursorMove",
-    "key": "ctrl+alt+down",
+    "key": "ctrl+down",
     "when": "!suggestWidgetVisible"
   },
   {
@@ -111,7 +111,7 @@
       "value": 5
     },
     "command": "cursorMove",
-    "key": "ctrl+alt+up",
+    "key": "ctrl+up",
     "when": "inStickySelectionMode"
   },
   {
