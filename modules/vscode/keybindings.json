@@ -100,8 +100,7 @@
       "value": 5
     },
     "command": "cursorMove",
-    "key": "ctrl+down",
-    "when": "!suggestWidgetVisible"
+    "key": "ctrl+down"
   },
   {
     "args": {
