@@ -110,8 +110,7 @@
       "value": 5
     },
     "command": "cursorMove",
-    "key": "ctrl+up",
-    "when": "inStickySelectionMode"
+    "key": "ctrl+up"
   },
   {
     "command": "cursorUp",
