@@ -2,6 +2,7 @@
   description = "LHB home-manager configuration";
 
   inputs = {
+    ghostty.url = "github:ghostty-org/ghostty";
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
     home-manager.url = "github:nix-community/home-manager";
@@ -16,6 +17,7 @@
     nixpkgs,
     home-manager,
     nix-index-database,
+    ghostty,
     ...
   }: {
     homeManagerModules.default = {

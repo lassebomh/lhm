@@ -1,11 +1,11 @@
 [
   {
-    "key": "ctrl+e",
-    "command": "editor.action.moveSelectionToPreviousFindMatch"
+    "command": "editor.action.moveSelectionToPreviousFindMatch",
+    "key": "ctrl+e"
   },
   {
-    "key": "ctrl+r",
-    "command": "editor.action.moveSelectionToNextFindMatch"
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "key": "ctrl+r"
   },
   {
     "command": "git.checkout",
@@ -91,6 +91,27 @@
     },
     "command": "cursorMove",
     "key": "ctrl+alt+k",
+    "when": "inStickySelectionMode"
+  },
+  {
+    "args": {
+      "by": "line",
+      "to": "down",
+      "value": 5
+    },
+    "command": "cursorMove",
+    "key": "ctrl+alt+down",
+    "when": "!suggestWidgetVisible"
+  },
+  {
+    "args": {
+      "by": "line",
+      "select": true,
+      "to": "down",
+      "value": 5
+    },
+    "command": "cursorMove",
+    "key": "ctrl+alt+up",
     "when": "inStickySelectionMode"
   },
   {
@@ -235,6 +256,14 @@
     },
     "command": "runCommands",
     "key": "alt+b",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": {
+      "commands": ["editor.action.goToDeclaration"]
+    },
+    "command": "runCommands",
+    "key": "ctrl+m",
     "when": "editorTextFocus"
   },
   {

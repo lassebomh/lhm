@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }: let
   username = "lasse";
@@ -54,7 +55,7 @@ in {
       PATH=$PATH:${homeDirectory}/.local/bin
     '';
 
-    neovim = {
+    helix = {
       enable = true;
       defaultEditor = true;
     };

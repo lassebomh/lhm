@@ -36,24 +36,24 @@ with lib; let
       };
     };
   plugins = {
-    gruvbox-dark = mkYaziPluginGithub {
-      name = "gruvbox-dark";
-      url = "https://github.com/bennyyip/gruvbox-dark.yazi.git";
-      rev = "c204853de7a78bc99ea628e51857ce65506468db";
-      hash = "sha256-NBco10MINyAJk1YWHwYUzvI9mnTJl9aYyDtQSTUP3Hs=";
-    };
+    # gruvbox-dark = mkYaziPluginGithub {
+    #   name = "gruvbox-dark";
+    #   url = "https://github.com/bennyyip/gruvbox-dark.yazi.git";
+    #   rev = "c204853de7a78bc99ea628e51857ce65506468db";
+    #   hash = "sha256-NBco10MINyAJk1YWHwYUzvI9mnTJl9aYyDtQSTUP3Hs=";
+    # };
     # starship = mkYaziPluginGithub {
     #   name = "starship";
     #   url = "https://github.com/Rolv-Apneseth/starship.yazi";
     #   rev = "77a65f5a367f833ad5e6687261494044006de9c3";
     #   hash = "sha256-sAB0958lLNqqwkpucRsUqLHFV/PJYoJL2lHFtfHDZF8=";
     # };
-    exifaudio = mkYaziPluginGithub {
-      name = "exifaudio";
-      url = "https://github.com/Sonico98/exifaudio.yazi";
-      rev = "6205460405fa39c017d0eef12997c1180658e695";
-      hash = "sha256-mYvq7xnd4gI0KoG5G+ygDxqCWdpZbMn3Im1EiW3eSyI=";
-    };
+    # exifaudio = mkYaziPluginGithub {
+    #   name = "exifaudio";
+    #   url = "https://github.com/Sonico98/exifaudio.yazi";
+    #   rev = "6205460405fa39c017d0eef12997c1180658e695";
+    #   hash = "sha256-mYvq7xnd4gI0KoG5G+ygDxqCWdpZbMn3Im1EiW3eSyI=";
+    # };
   };
 in {
   options.modules.${module} = {
@@ -89,10 +89,10 @@ in {
       enableZshIntegration = true;
       shellWrapperName = "j";
       # require("starship"):setup()
-      initLua = ''
-        require("full-border"):setup()
-        require("git"):setup()
-      '';
+      # require("full-border"):setup()
+      # initLua = ''
+      #   require("git"):setup()
+      # '';
       keymap = {
         manager.prepend_keymap =
           [
@@ -234,32 +234,32 @@ in {
       };
       settings = {
         plugin = {
-          prepend_previewers = [
-            {
-              mime = "audio/*";
-              run = "exifaudio";
-            }
-          ];
-          prepend_fetchers = [
-            {
-              id = "git";
-              name = "*/";
-              run = "git";
-            }
-            {
-              id = "git";
-              name = "*";
-              run = "git";
-            }
-          ];
+          # prepend_previewers = [
+          #   {
+          #     mime = "audio/*";
+          #     run = "exifaudio";
+          #   }
+          # ];
+          # prepend_fetchers = [
+          #   {
+          #     id = "git";
+          #     name = "*/";
+          #     run = "git";
+          #   }
+          #   {
+          #     id = "git";
+          #     name = "*";
+          #     run = "git";
+          #   }
+          # ];
         };
       };
       # flavors.starship = plugins.starship;
       plugins = {
         # mkdir = plugins.mkdir;
-        exifaudio = plugins.exifaudio;
-        full-border = mkYaziPlugin "full-border";
-        git = mkYaziPlugin "git";
+        # exifaudio = plugins.exifaudio;
+        # full-border = mkYaziPlugin "full-border";
+        # git = mkYaziPlugin "git";
         smart-filter = mkYaziPlugin "smart-filter";
         chmod = mkYaziPlugin "chmod";
         hide-preview = mkYaziPlugin "hide-preview";
