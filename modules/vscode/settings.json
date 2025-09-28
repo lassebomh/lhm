@@ -22,11 +22,10 @@
   "chat.extensionTools.enabled": false,
   "chat.mcp.discovery.enabled": {
     "claude-desktop": false,
-    "windsurf": false,
     "cursor-global": false,
-    "cursor-workspace": false
+    "cursor-workspace": false,
+    "windsurf": false
   },
-  "chat.mcp.enabled": false,
   "debug.onTaskErrors": "showErrors",
   "diffEditor.experimental.showMoves": true,
   "diffEditor.experimental.useTrueInlineView": true,
