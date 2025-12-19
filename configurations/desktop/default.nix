@@ -50,7 +50,6 @@ in {
 
   programs = {
     home-manager.enable = true;
-    go.enable = true;
     zsh.initExtra = ''
       PATH=$PATH:${homeDirectory}/.local/bin
     '';
