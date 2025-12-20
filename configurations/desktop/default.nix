@@ -21,6 +21,7 @@ in {
       nmap
       pipx
       kanata
+      qbittorrent-enhanced
     ];
 
     sessionPath = [
