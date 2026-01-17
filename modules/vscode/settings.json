@@ -125,6 +125,9 @@
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.pullBranch": "never",
   "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "analyses": { "composites": false }
+  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.checkJs": true,
   "jupyter.askForKernelRestart": false,

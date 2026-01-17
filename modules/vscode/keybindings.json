@@ -256,6 +256,10 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+t",
+    "command": "workbench.action.debug.start"
+  },
+  {
     "args": {
       "commands": ["editor.action.goToDeclaration"]
     },
