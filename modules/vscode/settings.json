@@ -169,5 +169,15 @@
   "workbench.startupEditor": "none",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.stickyScrollMaxItemCount": 2,
-  "zig.zls.enabled": "on"
+  "zig.zls.enabled": "on",
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://turborepo.dev": true,
+    "https://www.schemastore.org/": true
+  }
 }

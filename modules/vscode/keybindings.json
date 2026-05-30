@@ -164,7 +164,7 @@
   {
     "command": "cursorRight",
     "key": "alt+;",
-    "when": "editorTextFocus && !inQuickInput"
+    "when": "!inQuickInput"
   },
   {
     "command": "workbench.action.acceptSelectedQuickOpenItem",
@@ -269,23 +269,22 @@
   },
   {
     "command": "cursorEnd",
-    "key": "alt+'",
-    "when": "editorTextFocus"
+    "key": "alt+'"
   },
   {
     "command": "cursorEndSelect",
     "key": "alt+'",
-    "when": "editorTextFocus && inStickySelectionMode"
+    "when": "inStickySelectionMode"
   },
   {
     "command": "sticky-selection.enterStickySelectionMode",
     "key": "alt+a",
-    "when": "editorTextFocus && !inStickySelectionMode"
+    "when": "!inStickySelectionMode"
   },
   {
     "command": "sticky-selection.exitStickySelectionModePreserving",
     "key": "alt+a",
-    "when": "editorTextFocus && inStickySelectionMode"
+    "when": "inStickySelectionMode"
   },
   {
     "args": {
@@ -370,7 +369,7 @@
       "commands": ["editor.action.triggerSuggest", "focusSuggestion", "editor.action.showHover"]
     },
     "command": "runCommands",
-    "key": "ctrl+space",
+    "key": "ctrl+tab",
     "when": "!suggestWidgetVisible"
   },
   {
@@ -379,17 +378,17 @@
   },
   {
     "command": "hideSuggestWidget",
-    "key": "ctrl+space",
+    "key": "ctrl+tab",
     "when": "suggestWidgetVisible"
   },
   {
     "command": "-editor.action.triggerSuggest",
-    "key": "ctrl+space",
+    "key": "ctrl+tab",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
   },
   {
     "command": "-toggleSuggestionDetails",
-    "key": "ctrl+space",
+    "key": "ctrl+tab",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
   },
   {

@@ -22,6 +22,7 @@ in {
       pipx
       kanata
       qbittorrent-enhanced
+      comma
     ];
 
     sessionPath = [
