@@ -369,7 +369,7 @@
       "commands": ["editor.action.triggerSuggest", "focusSuggestion", "editor.action.showHover"]
     },
     "command": "runCommands",
-    "key": "ctrl+tab",
+    "key": "ctrl+q",
     "when": "!suggestWidgetVisible"
   },
   {
@@ -378,17 +378,17 @@
   },
   {
     "command": "hideSuggestWidget",
-    "key": "ctrl+tab",
+    "key": "ctrl+q",
     "when": "suggestWidgetVisible"
   },
   {
     "command": "-editor.action.triggerSuggest",
-    "key": "ctrl+tab",
+    "key": "ctrl+q",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
   },
   {
     "command": "-toggleSuggestionDetails",
-    "key": "ctrl+tab",
+    "key": "ctrl+q",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
   },
   {
